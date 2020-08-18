@@ -96,12 +96,27 @@ Exemplo:
 
 
 class Carro:
-    def __init__(self, motor, direcao):
+    def __init__(self, direcao, motor):
         self.direcao = direcao
         self.motor = motor
 
     def calcular_velocidade(self):
-        print()
+        return self.motor.velocidade
+
+    def acelerar(self):
+        return self.motor.acelerar()
+
+    def frear(self):
+        return self.motor.frear()
+
+    def calcular_direcao(self):
+        return self.direcao.valor
+
+    def girar_a_direita(self):
+        return self.direcao.girar_a_direita()
+
+    def girar_a_esquerda(self):
+        return self.direcao.girar_a_esquerda()
 
 
 class Motor:
